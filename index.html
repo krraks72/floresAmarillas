@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="Stylesheet" href="styleFlower.css" />
+    <title>Flower</title>
+  </head>
+  <div>
+    <div class="flower">
+      <div class="text-above">
+        Aquí estan tus flores amarillas amor, jajajajaja
+      </div>
+      <div class="mid" id="reproducir"></div>
+      <div class="Petal1 p1"></div>
+      <div class="Petal1 p2"></div>
+      <div class="Petal1 p3"></div>
+      <div class="Petal1 p4"></div>
+      <div class="Petal2 p1"></div>
+      <div class="Petal2 p2"></div>
+      <div class="Petal2 p3"></div>
+      <div class="Petal2 p4"></div>
+      <div class="Petal3 p1"></div>
+      <div class="Petal3 p2"></div>
+      <div class="Petal3 p3"></div>
+      <div class="Petal3 p4"></div>
+      <div class="text-below">Te amo Diana Milena Palacios</div>
+    </div>
+    <audio id="miAudio">
+      <source src="FloresAmarillas.mp3" type="audio/mpeg" />
+    </audio>
+    <script>
+        // Obtén una referencia al elemento de audio y al botón
+        var audio = document.getElementById("miAudio");
+        var botonReproducir = document.getElementById("reproducir");
+      
+        // Agrega un evento de clic al botón
+        botonReproducir.addEventListener("click", function() {
+          if (audio.paused) {
+            // Si el audio está en pausa, reproduce
+            audio.play();
+          } else {
+            // Si el audio se está reproduciendo, pausa
+            audio.pause();
+            audio.currentTime = 0; // Reinicia el audio al principio
+          }
+        });
+      </script>
+      
+  </body>
+</html>
