@@ -47,6 +47,21 @@
           }
         });
       </script>
-      
+      <script>
+        document.addEventListener("DOMContentLoaded", function() {
+          var divs = document.querySelectorAll('.hidden');
+    
+          function showDivsSequentially(index) {
+            if (index < divs.length) {
+              divs[index].style.display = 'block';
+              setTimeout(function() {
+                showDivsSequentially(index + 1);
+              }, 500); // Ajusta el tiempo según tus necesidades
+            }
+          }
+          
+          showDivsSequentially(0);
+        });
+      </script>
   </body>
 </html>
