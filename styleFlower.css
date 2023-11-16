@@ -22,7 +22,11 @@ body {
     /* Agrega una animación de pulsación */
     animation: pulsate 2s infinite;
   }
-  
+
+  .hidden {
+      display: none;
+  }
+
   .text-above,
   .text-below {
       position: absolute;
